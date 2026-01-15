@@ -16,7 +16,7 @@ export default function Providers({ children }: { children: ReactNode }) {
     setToken(localStorage.getItem('token'));
   }, []);
   const httpLink = new HttpLink({
-    uri: 'http://localhost:4000',
+    uri: 'https://back-end-smart-content-moderation-a-alpha.vercel.app/api/server',
   });
 
   const authLink = setContext((_, { headers }) => {

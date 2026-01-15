@@ -53,6 +53,7 @@ export default function LoginPage() {
         }));
 
         toast.success("Login successful!");
+        window.location.reload();
         router.push('/');
         if (!data.rememberMe) reset();
       }

@@ -39,14 +39,14 @@ export default function Home() {
 
     if (contents.length === 0) {
         return (
-            <div className="min-h-screen flex items-center justify-center">
+            <div className="min-h-screen bg-white flex items-center justify-center">
                 <p className="text-gray-500">No content found</p>
             </div>
         );
     }
 
     return (
-        <div className="min-h-screen bg-gray-50 px-6 py-10">
+        <div className="min-h-screen px-6 py-10">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 gap-4">
                 <h1 className="text-3xl font-bold text-gray-900">
                     All Published Content
