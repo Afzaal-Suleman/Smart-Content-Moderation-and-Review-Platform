@@ -56,7 +56,7 @@ export default function Page() {
     try {
       const res: any = await createContent({
         variables: {
-          input:data,
+          input: data,
         },
       });
 
@@ -165,11 +165,13 @@ export default function Page() {
 
             <button
               type="submit"
-              className="w-full sm:w-auto px-6 py-3 bg-blue-600 text-white rounded-md
-               hover:bg-blue-700 transition"
+              disabled={isSubmitting}
+              className={`w-full sm:w-auto px-6 py-3 rounded-md transition 
+              ${isSubmitting ? "bg-gray-400 cursor-not-allowed" : "bg-blue-600 hover:bg-blue-700 text-white"}`}
             >
-              Submit for Review
+              {isSubmitting ? "Submitting..." : "Submit for Review"}
             </button>
+
           </div>
         </form>
       </div>
